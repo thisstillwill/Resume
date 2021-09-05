@@ -1,0 +1,180 @@
+% !TEX program = xelatex
+
+% Generate text that can be copy-pasted
+\XeTeXgenerateactualtext=1
+
+% This file is licensed under the CC-NC-ND Creative Commons license
+
+% Start a document with the given default font size and paper size
+\documentclass[10pt,letterpaper]{article}
+
+% Set the page margins
+\usepackage[margin=0.75in]{geometry}
+
+% Setup the language
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available
+\usepackage{resume}
+
+% Begin document content
+\begin{document}
+
+% Relax whitespacing in favor of straight margins
+\sloppy
+
+% Title on top of the document
+\maintitle{William Svoboda}{Software Engineer}{Updated \today}
+
+% Add page break averse vertical spacing
+\nobreakvspace{0.3em}
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent\href{mailto:wsvoboda.at.princeton.dot.edu}{wsvoboda\mbox{}@\mbox{}princeton.edu}\sbull
+\href{tel:2108827873}{(210) 882-7873}\sbull
+\href{https://github.com/disstillwill}{github.com/disstillwill}\sbull
+\href{https://will.cx}{will.cx}
+
+% Horizontal rule with vertical space above and below
+\spacedhrule{0.9em}{-0.4em}
+
+% Root section title
+\roottitle{Education}
+
+\headedsection
+  {\href{https://www.princeton.edu/}{Princeton University}}
+  {\textsc{Princeton, New Jersey}} {%
+  \headedsubsection
+    {A.B. in Computer Science \textnormal{~(3.36 GPA)}}
+    {Expected May 2022}
+    {\bodytext{Coursework in Object Oriented Software Development, Advanced Programming Techniques, and Database Systems}}
+}
+
+\headedsection
+  {\href{https://www.unimelb.edu.au/}{University of Melbourne}}
+  {\textsc{Melbourne, Australia}} {%
+  \headedsubsection
+    {Study Abroad \textnormal{~(3.85 Semester GPA)}}
+    {Spring 2020} {}
+}
+
+\spacedhrule{0.5em}{-0.4em}
+
+\roottitle{Experience}
+
+\headedsection
+  {\href{https://www.litview.co/}{LitView}}
+  {\textsc{Remote}} {%
+  \headedsubsection
+    {Founding Engineer}
+    {June \apo20 -- July \apo21}
+    {\bodytext{
+      \begin{itemize}
+        \item Engineered novel research platform (\href{https://www.litview.co/}{litview.co}) using React and Flask
+        \item Utilized scrum workflow to ensure continuous development
+        \item Collaborated with executive, design, and legal teams to realize company vision
+      \end{itemize}
+      }}
+}
+
+\headedsection
+  {\href{https://www.cs.princeton.edu/academics/ugradpgm/spe/home/}{Princeton Summer Programming Experience}}
+  {\textsc{Princeton, New Jersey}} {%
+  \headedsubsection
+    {Summer Intern}
+    {June \apo19 -- July \apo19}
+    {\bodytext{
+      \begin{itemize}
+        \item Designed and developed a substantive application using the Unity game engine
+        \item Presented project as part of program capstone
+      \end{itemize}
+    }}
+}
+
+\vspace{-0.2em}
+
+\begin{center}
+  \emph{\small A complete list of work experience is available at \href{https://www.linkedin.com/in/williamsvoboda}{linkedin.com/in/williamsvoboda}.}
+\end{center}
+
+\spacedhrule{-0.6em}{-0.4em}
+
+\roottitle{Projects}
+
+\headedsection
+  {\href{https://disstillwill.github.io/IW-Spring-2021/}{``Teaching Graph Traversal Visually''}}
+  {\emph{Spring \apo21}}
+  {\bodytext{
+    \begin{itemize}
+      \item Designed assignment in Python to teach search algorithms 
+      \item Developed interactive visualizer and autograder
+      \item Evaluated project with real students as part of spring independent work
+    \end{itemize}
+  }}
+
+\headedsection
+  {\href{https://github.com/HoagieClub/course-websites}{Course Websites}}
+  {\emph{Spring \apo21}}
+  {\bodytext{
+    \begin{itemize}
+      \item Created website framework for Princeton classes using the \href{https://www.11ty.dev/}{Eleventy} static site generator
+      \item Directed team of three students using Agile project management
+    \end{itemize}
+  }}
+
+\headedsection
+  {\href{https://github.com/disstillwill/IW-Fall-2020}{``Improving the Marching Cubes Algorithm''}}
+  {\emph{Fall \apo20}}
+  {\bodytext{
+    \begin{itemize}
+      \item Extended the marching cubes algorithm to real-time terrain deformation
+      \item Compiled a significant written report as part of fall independent work
+    \end{itemize}
+  }}
+
+\spacedhrule{0.5em}{-0.4em}
+
+\roottitle{Awards}
+
+\headedsection
+  {\textbf{Army ROTC Scholarship}}
+  {\emph{Fall \apo18}}
+  {\bodytext{
+    \begin{itemize}
+      \item Competitive four-year scholarship awarded for merit and grades
+    \end{itemize}
+  }}
+
+\headedsection
+  {\textbf{Eagle Scout Award}}
+  {\emph{Fall \apo15}}
+  {\bodytext{
+    \begin{itemize}
+      \item Awarded for extensive service project in local community
+    \end{itemize}
+  }}
+
+\spacedhrule{0.5em}{-0.4em}
+
+\roottitle{Skills}
+
+% Special section that has an inline header with a 'hanging' paragraph
+\inlineheadsection
+  {Programming Languages:}
+  {Java \emph{(Proficient)}, Python \emph{(Proficient)}, JavaScript \emph{(Proficient)}, SQL \emph{(Familiar)}}
+
+\inlineheadsection
+  {Frameworks \& Tools: }
+  {Flask \emph{(Proficient)}, React \emph{(Proficient)}, Git \emph{(Proficient)}}
+
+\inlineheadsection
+  {Natural Languages:}
+  {English \emph{(Native)}, Spanish \emph{(Proficient)}, French \emph{(Elementary Proficiency)}}
+
+\end{document}
+
