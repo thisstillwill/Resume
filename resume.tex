@@ -11,12 +11,19 @@
 % Set the page margins
 \usepackage[margin=0.75in]{geometry}
 
+% Set symbol for item bullet
+\renewcommand\labelitemi{\bull}
+
 % Setup the language
 \usepackage[english]{babel}
 \hyphenation{Some-long-word}
 
 % Makes resume-specific commands available
 \usepackage{resume}
+
+% Typeset monetary amounts
+\usepackage{siunitx}
+\sisetup{group-separator = {,}}
 
 % Begin document content
 \begin{document}
@@ -35,7 +42,7 @@
 % \sbull is a spaced bullet
 % \href well..
 % \\ breaks the line into a new paragraph
-\noindent\href{mailto:wsvoboda.at.princeton.dot.edu}{wsvoboda\mbox{}@\mbox{}princeton.edu}\sbull
+\noindent\href{mailto:wcsvoboda.at.gmail.dot.com}{wcsvoboda\mbox{}@\mbox{}gmail.com}\sbull
 \href{tel:2108827873}{(210) 882-7873}\sbull
 \href{https://github.com/thisstillwill}{github.com/thisstillwill}\sbull
 \href{https://will.cx}{will.cx}
@@ -50,17 +57,20 @@
   {\href{https://www.princeton.edu/}{Princeton University}}
   {\textsc{Princeton, New Jersey}} {%
   \headedsubsection
-    {A.B. in Computer Science \textnormal{~(3.425 GPA)}}
-    {Expected May 2022}
-    {\bodytext{Coursework in Object Oriented Software Development, Advanced Programming Techniques, Database Systems, and Computational Biology}}
+    {A.B. in Computer Science \textnormal{~(3.44 \acr{GPA})}}
+    {May 2022}
+    {\bodytext{Coursework in Object Oriented Software Development, Advanced Programming Techniques, Information Security, Database Systems, and Computational Biology}}
+    \headedsubsection
+    {Certificate in Spanish Language and Culture}
+    {May 2022}{}
 }
 
 \headedsection
   {\href{https://www.unimelb.edu.au/}{University of Melbourne}}
   {\textsc{Melbourne, Australia}} {%
   \headedsubsection
-    {Study Abroad \textnormal{~(3.85 Semester GPA)}}
-    {Spring 2020} {}
+    {Study Abroad \textnormal{~(3.85 Semester \acr{GPA})}}
+    {Spring 2020}{}
 }
 
 \spacedhrule{0.5em}{-0.4em}
@@ -71,12 +81,13 @@
   {\href{https://www.litview.co/}{LitView}}
   {\textsc{Remote}} {%
   \headedsubsection
-    {Founding Engineer}
-    {June \apo20 -- July \apo21}
+    {Co-founder}
+    {June 2020 -- Present}
     {\bodytext{
       \begin{itemize}
-        \item Engineered novel research platform (\href{https://www.litview.co/}{litview.co}) using React and Flask
-        \item Utilized scrum workflow to ensure continuous development
+        \item Technical co-founder of research performance company (\href{https://www.litview.co/}{litview.co})
+        \item Raised \SI{150000}[\$]{} during pre-seed funding round
+        \item Engineered product with React and Flask using Agile practices
         \item Collaborated with executive, design, and legal teams to realize company vision
       \end{itemize}
       }}
@@ -87,53 +98,51 @@
   {\textsc{Princeton, New Jersey}} {%
   \headedsubsection
     {Summer Intern}
-    {June \apo19 -- July \apo19}
+    {June 2019 -- July 2019}
     {\bodytext{
       \begin{itemize}
-        \item Designed and developed a substantive application using the Unity game engine
-        \item Presented project as part of program capstone
+        \item Collaborated with a partner on a 6-week substantive programming project
+        \item Presented to cohort and Princeton faculty during capstone event
       \end{itemize}
     }}
 }
 
 \vspace{-0.2em}
-
 \begin{center}
   \emph{\small A complete list of work experience is available at \href{https://www.linkedin.com/in/williamsvoboda}{linkedin.com/in/williamsvoboda}.}
 \end{center}
 
-\spacedhrule{-0.6em}{-0.4em}
+\spacedhrule{-0.2em}{-0.4em}
 
 \roottitle{Projects}
 
 \headedsection
-  {\href{https://thisstillwill.github.io/IW-Spring-2021/}{``Teaching Graph Traversal Visually''}}
-  {\emph{Spring \apo21}}
+  {\href{https://github.com/thisstillwill/Geo-Thesis}{``Applications of Geospatial Data in Digital Communication''}}
+  {\emph{Fall 2021 -- Spring 2022}}
   {\bodytext{
     \begin{itemize}
-      \item Designed assignment in Python to teach search algorithms 
-      \item Developed interactive visualizer and autograder
-      \item Evaluated project with real students as part of spring independent work
+      \item Created full-stack communication app as part of senior thesis
+      \item Deployed to App Store and tested on Princeton's campus with 18 students
     \end{itemize}
   }}
 
 \headedsection
-  {\href{https://github.com/HoagieClub/course-websites}{Course Websites}}
-  {\emph{Spring \apo21}}
+  {\href{https://thisstillwill.github.io/IW-Spring-2021/}{``Teaching Graph Traversal Visually''}}
+  {\emph{Spring 2021}}
   {\bodytext{
     \begin{itemize}
-      \item Created website framework for Princeton classes using the \href{https://www.11ty.dev/}{Eleventy} static site generator
-      \item Directed team of three students using Agile project management
+      \item Designed assignment to teach search algorithms and evaluated with Princeton students
+      \item Developed interactive visualizer and autograder in Python
     \end{itemize}
   }}
 
 \headedsection
   {\href{https://github.com/thisstillwill/IW-Fall-2020}{``Improving the Marching Cubes Algorithm''}}
-  {\emph{Fall \apo20}}
+  {\emph{Fall 2020}}
   {\bodytext{
     \begin{itemize}
       \item Extended the marching cubes algorithm to real-time terrain deformation
-      \item Compiled a significant written report as part of fall independent work
+      \item Created a live demo application in the Unity game engine
     \end{itemize}
   }}
 
@@ -143,19 +152,19 @@
 
 \headedsection
   {\textbf{Army ROTC Scholarship}}
-  {\emph{Fall \apo18}}
+  {\emph{Fall 2018}}
   {\bodytext{
     \begin{itemize}
-      \item Competitive four-year scholarship awarded for merit and grades
+      \item Awarded full four-year scholarship for merit and grades
     \end{itemize}
   }}
 
 \headedsection
   {\textbf{Eagle Scout Award}}
-  {\emph{Fall \apo15}}
+  {\emph{Fall 2015}}
   {\bodytext{
     \begin{itemize}
-      \item Awarded for extensive service project in local community
+      \item Recognized for extensive service project in local community
     \end{itemize}
   }}
 
@@ -166,11 +175,11 @@
 % Special section that has an inline header with a 'hanging' paragraph
 \inlineheadsection
   {Programming Languages:}
-  {Java, Python, JavaScript, HTML/CSS, R, SQL, C\#}
+  {Java, Swift, Python, JavaScript, \acr{HTML/CSS}, R, \acr{SQL}, C\#}
 
 \inlineheadsection
   {Frameworks \& Tools:}
-  {Flask, React, Git, \LaTeX, Unix utilities}
+  {Flask, React, Swift\acr{UI}, Git, \LaTeX, Unix utilities}
 
 \inlineheadsection
   {Natural Languages:}
