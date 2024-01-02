@@ -21,9 +21,11 @@
 % Makes resume-specific commands available
 \usepackage{resume}
 
-% Typeset monetary amounts
 \usepackage{siunitx}
+% Typeset monetary amounts
 \sisetup{group-separator = {,}}
+% No space before percent sign
+\DeclareSIUnit[quantity-product = ]\percent{\char`\%}
 
 % Begin document content
 \begin{document}
@@ -65,30 +67,35 @@
     {May 2022}{}
 }
 
-\headedsection
-  {\href{https://www.unimelb.edu.au/}{University of Melbourne}}
-  {\textsc{Melbourne, Australia}} {%
-  \headedsubsection
-    {Semester Study Abroad \textnormal{(3.85 \acr{GPA})}}
-    {Spring 2020}{}
-}
+% \headedsection
+%   {\href{https://www.unimelb.edu.au/}{University of Melbourne}}
+%   {\textsc{Melbourne, Australia}} {%
+%   \headedsubsection
+%     {Semester Study Abroad \textnormal{(3.85 \acr{GPA})}}
+%     {Spring 2020}{}
+% }
 
 \spacedhrule{0.5em}{-0.4em}
 
+% Root section title
 \roottitle{Skills and Qualifications}
 
 % Special section that has an inline header with a 'hanging' paragraph
 \inlineheadsection
   {Security Clearance:}
-  {Active U.S. Secret Clearance}
+  {Active \acr{TS}/\acr{SCI}}
+
+\inlineheadsection
+  {Certifications:}
+  {Project Management Professional (\acr{PMP}), CompTIA \SP}
 
 \inlineheadsection
   {Programming Languages:}
-  {Python, Java, \acr{SQL}, Swift, JavaScript, \acr{HTML/CSS}, R, C\#}
+  {Python, Java, \acr{SQL}, JavaScript, \acr{HTML}/\acr{CSS}, R, C\#}
 
 \inlineheadsection
-  {Frameworks \& Tools:}
-  {Flask, React, Swift\acr{UI}, Git, \LaTeX, Unix utilities}
+  {Frameworks and Tools:}
+  {Flask, React, Docker, Git, \LaTeX, Unix utilities}
 
 % \inlineheadsection
 %   {Natural Languages:}
@@ -99,15 +106,33 @@
 \roottitle{Experience}
 
 \headedsection
+  {\href{https://www.lockheedmartin.com/en-us/who-we-are/business-areas/space.html}{Lockheed Martin Corporation}}
+  {\textsc{King of Prussia, Pennsylvania}} {%
+  \headedsubsection
+    {Associate Software Engineer}
+    {May 2023 -- Present}
+    {\bodytext{
+      \begin{itemize}
+        \item Refactored two Node.js \acr{API}s into microservices to integrate data from different teams
+        \item Resolved critical bug with ActiveMQ Artemis connection, enabling product release
+        \item Maintained unit and integration tests using Jest to ensure \SI{95}{\percent} code coverage
+        \item Mentored and helped onboard two junior developers onto Agile team
+      \end{itemize}
+    }}
+}
+
+\headedsection
   {\href{https://www.linkedin.com/company/latent-knowledge}{Latent Knowledge Solutions Inc.}}
   {\textsc{Remote}} {%
   \headedsubsection
     {Technical Lead}
-    {May 2022 -- Present}
+    {May 2022 -- May 2023}
     {\bodytext{
       \begin{itemize}
-        \item Maintained backend Flask API and coordinated integration with React frontend
         \item Supervised onboarding, feature planning, and task delegation for four developers
+        \item Represented technical team for investors to facilitate \SI{150000}[\$]{} pre-seed funding round
+        % \item Raised \SI{150000}[\$]{} together with company founder for pre-seed funding round
+        \item Maintained backend Flask API and coordinated integration with React frontend
         \item Managed product release schedule and ran final deployment pipeline on \acr{AWS}
       \end{itemize}
       }}
@@ -144,27 +169,27 @@
 
 \spacedhrule{-0.2em}{-0.4em}
 
-\roottitle{Projects}
+% \roottitle{Projects}
 
-\headedsection
-  {\href{https://github.com/thisstillwill/Geo-Thesis}{``Applications of Geospatial Data in Digital Communication''}}
-  {\emph{Fall 2021 -- Spring 2022}}
-  {\bodytext{
-    \begin{itemize}
-      \item Created full-stack application to explore proximity-based messaging as part of senior thesis
-      \item Deployed to the App Store and tested on Princeton's campus with 18 students
-    \end{itemize}
-  }}
+% \headedsection
+%   {\href{https://github.com/thisstillwill/Geo-Thesis}{``Applications of Geospatial Data in Digital Communication''}}
+%   {\emph{Fall 2021 -- Spring 2022}}
+%   {\bodytext{
+%     \begin{itemize}
+%       \item Created full-stack application to explore proximity-based messaging as part of senior thesis
+%       \item Deployed to the App Store and tested on Princeton's campus with 18 students
+%     \end{itemize}
+%   }}
 
-\headedsection
-  {\href{https://thisstillwill.github.io/IW-Spring-2021/}{``Teaching Graph Traversal Visually''}}
-  {\emph{Spring 2021}}
-  {\bodytext{
-    \begin{itemize}
-      \item Designed assignment to teach graph search algorithms to Princeton students
-      \item Created interactive visualizer and autograder in Python to evaluate student understanding
-    \end{itemize}
-  }}
+% \headedsection
+%   {\href{https://thisstillwill.github.io/IW-Spring-2021/}{``Teaching Graph Traversal Visually''}}
+%   {\emph{Spring 2021}}
+%   {\bodytext{
+%     \begin{itemize}
+%       \item Designed assignment to teach graph search algorithms to Princeton students
+%       \item Created interactive visualizer and autograder in Python to evaluate student understanding
+%     \end{itemize}
+%   }}
 
 % \headedsection
 %   {\href{https://github.com/thisstillwill/IW-Fall-2020}{``Improving the Marching Cubes Algorithm''}}
@@ -176,7 +201,7 @@
 %     \end{itemize}
 %   }}
 
-\spacedhrule{0.5em}{-0.4em}
+% \spacedhrule{0.5em}{-0.4em}
 
 \roottitle{Awards}
 
@@ -186,7 +211,7 @@
   {\bodytext{
     \begin{itemize}
       \item Accepted to the four-week I-Corps Regional Program for entrepreneurial development
-      \item Received \SI{3000}[\$]{} NSF grant for product validation and customer discovery
+      \item Awarded \SI{3000}[\$]{} NSF grant for product validation and customer discovery
     \end{itemize}
   }}
 
@@ -195,7 +220,7 @@
   {\emph{Fall 2018}}
   {\bodytext{
     \begin{itemize}
-      \item Awarded full four-year college scholarship for merit and grades
+      \item Awarded full four-year college scholarship for merit and academic achievement
     \end{itemize}
   }}
 
