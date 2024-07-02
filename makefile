@@ -3,7 +3,7 @@
 all: resume.pdf
 
 resume.pdf: resume.tex
-	latexmk -pv -pdf -xelatex -interaction=batchmode resume.tex
+	latexmk -g -pv -pdf -xelatex -interaction=batchmode resume.tex
 
 clean:
 	latexmk -CA
