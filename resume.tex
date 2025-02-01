@@ -27,6 +27,9 @@
 % No space before percent sign
 \DeclareSIUnit[quantity-product = ]\percent{\char`\%}
 
+% Handle English ordinal numbers
+\usepackage[super]{nth}
+
 % Begin document content
 \begin{document}
 
@@ -86,16 +89,16 @@
   {Active \acr{TS}/\acr{SCI}}
 
 \inlineheadsection
-  {Certifications:}
+  {Certifications:} 
   {CompTIA \SP, Project Management Professional (\acr{PMP})}
 
 \inlineheadsection
   {Programming Languages:}
-  {Python, JavaScript, Java, \acr{SQL}, \acr{HTML}/\acr{CSS}, R, C\#}
+  {Java, Python, JavaScript, \acr{SQL}, \acr{HTML}/\acr{CSS}, C\#, R}
 
 \inlineheadsection
   {Frameworks and Tools:}
-  {Flask, React, Docker, Git, Wireshark, Cisco IOS, Unix utilities}
+  {Quarkus, Kubernetes, Docker, Flask, React, Git, Wireshark, Unix utilities}
 
 % \inlineheadsection
 %   {Natural Languages:}
@@ -103,20 +106,22 @@
 
 \spacedhrule{1.6em}{-0.4em}
 
-\roottitle{Experience}
+\roottitle{Professional Experience}
 
 \headedsection
-  {\href{https://www.lockheedmartin.com/en-us/who-we-are/business-areas/space.html}{Lockheed Martin Corporation}}
+  {\href{https://www.lockheedmartin.com/en-us/capabilities/space/national-security-space.html}{Lockheed Martin Corporation}}
   {\textsc{King of Prussia, Pennsylvania}} {%
   \headedsubsection
     {Associate Software Engineer}
     {May 2023 -- Present}
     {\bodytext{
       \begin{itemize}
-        \item Refactored two Node.js \acr{API}s into microservices to integrate data from different teams
-        \item Resolved critical bug with ActiveMQ Artemis connection, enabling product release
-        \item Maintained unit and integration tests using Jest to ensure \SI{95}{\percent} code coverage
-        \item Mentored and helped onboard two junior developers onto Agile team
+        \item Optimized critical flow in a core Java microservice by over \SI{60}{\percent} using concurrency
+        % \item Refactored two Node.js \acr{API}s into microservices to integrate data from different teams
+        % \item Resolved critical bug with ActiveMQ Artemis connection, enabling product release
+        \item Maintained unit and integration tests using Jest, JUnit, and Cucumber to ensure \SI{95}{\percent} code coverage
+        \item Represented team through presentation in sprint demos, defect reviews, and technical exchanges
+        \item Mentored and onboarded three junior developers onto Agile team
       \end{itemize}
     }}
 }
@@ -132,8 +137,8 @@
         \item Supervised onboarding, feature planning, and task delegation for four developers
         \item Represented technical team for investors to facilitate \SI{150000}[\$]{} pre-seed funding round
         % \item Raised \SI{150000}[\$]{} together with company founder for pre-seed funding round
-        \item Maintained backend Flask API and coordinated integration with React frontend
-        \item Managed product release schedule and ran final deployment pipeline on \acr{AWS}
+        % \item Maintained backend Flask API and coordinated integration with React frontend
+        % \item Managed product release schedule and ran final deployment pipeline on \acr{AWS}
       \end{itemize}
       }}
   \headedsubsection
@@ -141,25 +146,11 @@
     {June 2020 -- August 2021}
     {\bodytext{
       \begin{itemize}
-        \item Developed \acr{MVP} for LitView (\href{https://www.litview.co/}{litview.co}), an online research platform, using React and Flask
+        \item Developed \acr{MVP} for LitView, an online research platform, using React and Flask
         \item Implemented product analytics to track and understand user activity using Amplitude
-        \item Launched pilot programs to validate product at two universities for over 100 users
+        % \item Launched pilot programs to validate product at two universities for over 100 users
       \end{itemize}
       }}
-}
-
-\headedsection
-  {\href{https://www.cs.princeton.edu/academics/ugradpgm/spe/home/}{Princeton Summer Programming Experience}}
-  {\textsc{Princeton, New Jersey}} {%
-  \headedsubsection
-    {Summer Intern}
-    {June 2019 -- July 2019}
-    {\bodytext{
-      \begin{itemize}
-        \item Designed and developed 3D video game using C\# and the Unity game engine
-        \item Demonstrated final product during capstone event to Princeton faculty and program cohort
-      \end{itemize}
-    }}
 }
 
 \vspace{-0.2em}
@@ -168,6 +159,53 @@
 \end{center}
 
 \spacedhrule{-0.2em}{-0.4em}
+
+% \headedsection
+%   {\href{https://www.cs.princeton.edu/academics/ugradpgm/spe/home/}{Princeton Summer Programming Experience}}
+%   {\textsc{Princeton, New Jersey}} {%
+%   \headedsubsection
+%     {Summer Intern}
+%     {June 2019 -- July 2019}
+%     {\bodytext{
+%       \begin{itemize}
+%         \item Designed and developed 3D video game using C\# and the Unity game engine
+%         \item Demonstrated final product during capstone event to Princeton faculty and program cohort
+%       \end{itemize}
+%     }}
+% }
+
+% \spacedhrule{1.6em}{-0.4em}
+
+\roottitle{Military Experience}
+
+\headedsection
+  {\href{https://calguard.ca.gov/cybernetworkdefense/}{Cyber Protection Team 171, \nth{91} Cyber Brigade}}
+  {\textsc{Camp San Luis Obispo, California}} {%
+  \headedsubsection
+    {Mission Element Lead}
+    {July 2024 -- Present}
+    {\bodytext{
+      \begin{itemize}
+        \item Lead, manage, and develop 19 National Guard officers and Soldiers in defensive cyber operations
+        \item Maintain technical, medical, and administrative readiness of all assigned members
+        \item Provide input and coordination for annual training requirements and other cybersecurity exercises
+      \end{itemize}
+    }}
+}
+
+\headedsection
+  {\href{https://cybercoe.army.mil/Cyber-Center-of-Excellence/Schools/Cyber-School/Cyber-Technical-College/}{U.S. Army Cyber Center of Excellence}}
+  {\textsc{Fort Eisenhower, Georgia}} {%
+  \headedsubsection
+    {Officer Student}
+    {October 2023 -- July 2024}
+    {\bodytext{
+      \begin{itemize}
+        \item Completed the nine-month Cyber Basic Officer Leader Course (\acr{CyBOLC}) with core instruction in \mbox{defensive~cyber~operations}, \mbox{offensive cyber operations}, and \mbox{electromagnetic warfare}
+        \item Selected as the class Honor Graduate for attaining the second-highest overall \acr{GPA}
+      \end{itemize}
+    }}
+}
 
 % \roottitle{Projects}
 
@@ -201,7 +239,7 @@
 %     \end{itemize}
 %   }}
 
-% \spacedhrule{0.5em}{-0.4em}
+\spacedhrule{0.5em}{-0.4em}
 
 \roottitle{Awards}
 
@@ -224,13 +262,13 @@
     \end{itemize}
   }}
 
-\headedsection
-  {\textbf{Eagle Scout Award}}
-  {\emph{Fall 2015}}
-  {\bodytext{
-    \begin{itemize}
-      \item Recognized for extensive service project and leadership in local community
-    \end{itemize}
-  }}
+% \headedsection
+%   {\textbf{Eagle Scout Award}}
+%   {\emph{Fall 2015}}
+%   {\bodytext{
+%     \begin{itemize}
+%       \item Recognized for extensive service project and leadership in local community
+%     \end{itemize}
+%   }}
 
 \end{document}
